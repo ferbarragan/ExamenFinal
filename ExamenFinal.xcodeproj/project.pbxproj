@@ -44,6 +44,9 @@
 		AAFF65CB1D71EC7400CE1F38 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFF65BF1D71EC7400CE1F38 /* SBJsonWriter.m */; };
 		AAFF65D01D71F4CE00CE1F38 /* ObjectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFF65CF1D71F4CE00CE1F38 /* ObjectResponse.m */; };
 		AAFF65D31D71FD7F00CE1F38 /* Json_main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFF65D21D71FD7F00CE1F38 /* Json_main.m */; };
+		AAFF65D61D7206EC00CE1F38 /* Json_weather.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFF65D51D7206EC00CE1F38 /* Json_weather.m */; };
+		AAFF65DD1D724D4E00CE1F38 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFF65DB1D724D4E00CE1F38 /* Cell.m */; };
+		AAFF65DE1D724D4E00CE1F38 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAFF65DC1D724D4E00CE1F38 /* Cell.xib */; };
 		E68FBB6B91F113922337FE8A /* Pods_ExamenFinal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D47335D0DB5ECB9C255344 /* Pods_ExamenFinal.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +129,11 @@
 		AAFF65CF1D71F4CE00CE1F38 /* ObjectResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectResponse.m; sourceTree = "<group>"; };
 		AAFF65D11D71FD7F00CE1F38 /* Json_main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Json_main.h; sourceTree = "<group>"; };
 		AAFF65D21D71FD7F00CE1F38 /* Json_main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Json_main.m; sourceTree = "<group>"; };
+		AAFF65D41D7206EC00CE1F38 /* Json_weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Json_weather.h; sourceTree = "<group>"; };
+		AAFF65D51D7206EC00CE1F38 /* Json_weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Json_weather.m; sourceTree = "<group>"; };
+		AAFF65DA1D724D4E00CE1F38 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		AAFF65DB1D724D4E00CE1F38 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		AAFF65DC1D724D4E00CE1F38 /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		F9411CF00E523EC23070655A /* Pods-ExamenFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamenFinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExamenFinal/Pods-ExamenFinal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +246,9 @@
 		AAFC36B41D712729003AAA5D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				AAFF65DA1D724D4E00CE1F38 /* Cell.h */,
+				AAFF65DB1D724D4E00CE1F38 /* Cell.m */,
+				AAFF65DC1D724D4E00CE1F38 /* Cell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -366,6 +377,8 @@
 				AAFF65CF1D71F4CE00CE1F38 /* ObjectResponse.m */,
 				AAFF65D11D71FD7F00CE1F38 /* Json_main.h */,
 				AAFF65D21D71FD7F00CE1F38 /* Json_main.m */,
+				AAFF65D41D7206EC00CE1F38 /* Json_weather.h */,
+				AAFF65D51D7206EC00CE1F38 /* Json_weather.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -431,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAFC36AB1D71260B003AAA5D /* LaunchScreen.storyboard in Resources */,
+				AAFF65DE1D724D4E00CE1F38 /* Cell.xib in Resources */,
 				AAFC36A81D71260B003AAA5D /* Assets.xcassets in Resources */,
 				AAFC36A31D71260B003AAA5D /* Main.storyboard in Resources */,
 			);
@@ -497,6 +511,7 @@
 				AAFC36A61D71260B003AAA5D /* ExamenFinal.xcdatamodeld in Sources */,
 				AAFF65C31D71EC7400CE1F38 /* SBJsonStreamParserAccumulator.m in Sources */,
 				AAFF65761D71459100CE1F38 /* BackgroundLayer.m in Sources */,
+				AAFF65D61D7206EC00CE1F38 /* Json_weather.m in Sources */,
 				AAFC36A01D71260B003AAA5D /* Start.m in Sources */,
 				AAFF65941D71E35400CE1F38 /* ManagedObjectInstanceProvider.m in Sources */,
 				AAFF65961D71E35400CE1F38 /* CommonLoggingProvider.m in Sources */,
@@ -507,6 +522,7 @@
 				AAFF65C91D71EC7400CE1F38 /* SBJsonTokeniser.m in Sources */,
 				AAFF65C61D71EC7400CE1F38 /* SBJsonStreamWriter.m in Sources */,
 				AAFC36BA1D712785003AAA5D /* ProductView.m in Sources */,
+				AAFF65DD1D724D4E00CE1F38 /* Cell.m in Sources */,
 				AAFC36BD1D712796003AAA5D /* BuyView.m in Sources */,
 				AAFC36B71D712767003AAA5D /* TemperatureView.m in Sources */,
 				AAFF65A41D71E48000CE1F38 /* Parser.m in Sources */,

@@ -11,10 +11,11 @@
 #import "ObjectMapper.h"
 #import "ObjectResponse.h"
 #import "Json_main.h"
+#import "Json_weather.h"
 #import "Parser.h"
 
 /* For debug support */
-#define nDebugEnable    1
+#define nDebugEnable    0
 #define print(x)        if(nDebugEnable){(x);}
 
 extern NSDictionary *mjsonWeather;

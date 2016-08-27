@@ -12,6 +12,7 @@
 #define nLat @"20.609835"
 #define nLon @"-103.448989"
 #define KELVIN_CONV 273.75
+#define nURLMain        @"http://openweathermap.org/img/w/"
 
 @interface TemperatureView ()
 
@@ -47,23 +48,35 @@
     item.leftBarButtonItem = backButton;
     
     /* Call the Web Service */
-    mjsonWeather = [WebServices getWeatherWithLatitude:nLat AndLongitude:nLon];
-    print(NSLog(@"json = %@",mjsonWeather));
+    mjsonWeather = [WebServices getWeatherWithLatitude:[NSString stringWithFormat:@"%f",self.latitude] AndLongitude:[NSString stringWithFormat:@"%f",self.longitude]];
     
     ObjectResponse *objectResponse = [Parser parseWeatherObject];
     
-    NSString *stName = objectResponse.name;
-    self.lblName.text = stName;
+    NSString *stName = objectResponse.name; /* Store the parsed name. */
     
     Json_main *main = objectResponse.main;
-    
+    //Json_weather *weather = objectResponse.weather[0];
+    /* Get the temperatures */
     float temp_max = main.temp_max - KELVIN_CONV;
     float temp_min = main.temp_min - KELVIN_CONV;
+    /* Get the humidity */
     int humidity = main.humidity;
+    /* Get the weather icon */
+    //NSString *icon = [[NSString alloc] initWithString:weather.icon];
+    NSString *icon = @"04d";
+    NSString *iconURL = [[NSString alloc] initWithFormat:@"%@%@.png",nURLMain,icon];
+    NSURL *url = [NSURL URLWithString:iconURL];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImage *img = [[UIImage alloc] initWithData:data];
+    //CGSize size = img.size;
     
+    /* Update the UI elements with the parsed information. */
+    self.lblName.text = stName;
     self.lblMaxTempVal.text = [NSString stringWithFormat:@"%.1fºC", temp_max];
     self.lblMinTempVal.text = [NSString stringWithFormat:@"%.1fºC", temp_min];
     self.lblHumidityVal.text = [NSString stringWithFormat:@"%d%%", humidity];
+    self.imgWeatherIcon.image = img;
+    //self.imgWeatherIcon.contentMode
     
 }
 /* ------------------------------------------------------------------------------------------------------------------ */

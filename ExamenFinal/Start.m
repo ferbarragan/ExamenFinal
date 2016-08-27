@@ -15,6 +15,8 @@
 @interface Start ()
 
 @property GMSMapView *mapView;
+@property float currLat;
+@property float currLon;
 
 @end
 
@@ -53,7 +55,9 @@
 /*! \brief iOS Specific Function:
  */
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
+    TemperatureView * temperatureView = [segue destinationViewController];
+    temperatureView.latitude  = self.currLat;
+    temperatureView.longitude = self.currLon;
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 
@@ -73,9 +77,12 @@
     marker.title = @"View weather";
     marker.map = self.mapView; /* Add marker to the MapView */
     
+    /* Store the current marker's coordinates. */
+    self.currLat = marker.position.latitude;
+    self.currLon = marker.position.longitude;
+    
     /* Set the recently created marked as selected. */
     [self.mapView setSelectedMarker:marker];
-
 }
 
 /*! \brief GoogleMaps SDK Specific Function:
@@ -83,6 +90,7 @@
 -(void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker {
     /* Move to the segue idSegueTemperatureView. */
     [self performSegueWithIdentifier:@"idSegueTemperatureView" sender:self];
+    
 }
 
 @end

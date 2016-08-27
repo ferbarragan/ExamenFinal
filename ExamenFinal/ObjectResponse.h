@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Json_main.h"
+#import "Json_weather.h"
 
 @interface ObjectResponse : NSObject
 
 /*  */
+@property (nonatomic, strong) NSMutableArray *weather;
+//@property (nonatomic, strong) Json_weather * weather;
 @property (nonatomic, strong) Json_main *main;
 @property (nonatomic, strong) NSString *name;
 
