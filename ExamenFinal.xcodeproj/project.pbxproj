@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		AAFC369A1D71260B003AAA5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC36991D71260B003AAA5D /* main.m */; };
 		AAFC369D1D71260B003AAA5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC369C1D71260B003AAA5D /* AppDelegate.m */; };
-		AAFC36A01D71260B003AAA5D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC369F1D71260B003AAA5D /* ViewController.m */; };
+		AAFC36A01D71260B003AAA5D /* Start.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC369F1D71260B003AAA5D /* Start.m */; };
 		AAFC36A31D71260B003AAA5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFC36A11D71260B003AAA5D /* Main.storyboard */; };
 		AAFC36A61D71260B003AAA5D /* ExamenFinal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAFC36A41D71260B003AAA5D /* ExamenFinal.xcdatamodeld */; };
 		AAFC36A81D71260B003AAA5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFC36A71D71260B003AAA5D /* Assets.xcassets */; };
 		AAFC36AB1D71260B003AAA5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFC36A91D71260B003AAA5D /* LaunchScreen.storyboard */; };
+		AAFC36B71D712767003AAA5D /* TemperatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC36B61D712767003AAA5D /* TemperatureView.m */; };
+		AAFC36BA1D712785003AAA5D /* ProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC36B91D712785003AAA5D /* ProductView.m */; };
+		AAFC36BD1D712796003AAA5D /* BuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC36BC1D712796003AAA5D /* BuyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +24,19 @@
 		AAFC36991D71260B003AAA5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AAFC369B1D71260B003AAA5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AAFC369C1D71260B003AAA5D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AAFC369E1D71260B003AAA5D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AAFC369F1D71260B003AAA5D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AAFC369E1D71260B003AAA5D /* Start.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Start.h; sourceTree = "<group>"; };
+		AAFC369F1D71260B003AAA5D /* Start.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Start.m; sourceTree = "<group>"; };
 		AAFC36A21D71260B003AAA5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAFC36A51D71260B003AAA5D /* ExamenFinal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExamenFinal.xcdatamodel; sourceTree = "<group>"; };
 		AAFC36A71D71260B003AAA5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAFC36AA1D71260B003AAA5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAFC36AC1D71260B003AAA5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAFC36B51D712767003AAA5D /* TemperatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureView.h; sourceTree = "<group>"; };
+		AAFC36B61D712767003AAA5D /* TemperatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureView.m; sourceTree = "<group>"; };
+		AAFC36B81D712785003AAA5D /* ProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductView.h; sourceTree = "<group>"; };
+		AAFC36B91D712785003AAA5D /* ProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductView.m; sourceTree = "<group>"; };
+		AAFC36BB1D712796003AAA5D /* BuyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyView.h; sourceTree = "<group>"; };
+		AAFC36BC1D712796003AAA5D /* BuyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +69,9 @@
 		AAFC36971D71260B003AAA5D /* ExamenFinal */ = {
 			isa = PBXGroup;
 			children = (
-				AAFC369B1D71260B003AAA5D /* AppDelegate.h */,
-				AAFC369C1D71260B003AAA5D /* AppDelegate.m */,
-				AAFC369E1D71260B003AAA5D /* ViewController.h */,
-				AAFC369F1D71260B003AAA5D /* ViewController.m */,
+				AAFC36B41D712729003AAA5D /* Cell */,
+				AAFC36B31D712719003AAA5D /* Main */,
+				AAFC36B21D712713003AAA5D /* Controllers */,
 				AAFC36A11D71260B003AAA5D /* Main.storyboard */,
 				AAFC36A71D71260B003AAA5D /* Assets.xcassets */,
 				AAFC36A91D71260B003AAA5D /* LaunchScreen.storyboard */,
@@ -80,6 +88,37 @@
 				AAFC36991D71260B003AAA5D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAFC36B21D712713003AAA5D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AAFC369E1D71260B003AAA5D /* Start.h */,
+				AAFC369F1D71260B003AAA5D /* Start.m */,
+				AAFC36B51D712767003AAA5D /* TemperatureView.h */,
+				AAFC36B61D712767003AAA5D /* TemperatureView.m */,
+				AAFC36B81D712785003AAA5D /* ProductView.h */,
+				AAFC36B91D712785003AAA5D /* ProductView.m */,
+				AAFC36BB1D712796003AAA5D /* BuyView.h */,
+				AAFC36BC1D712796003AAA5D /* BuyView.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AAFC36B31D712719003AAA5D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AAFC369B1D71260B003AAA5D /* AppDelegate.h */,
+				AAFC369C1D71260B003AAA5D /* AppDelegate.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		AAFC36B41D712729003AAA5D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +192,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAFC36A61D71260B003AAA5D /* ExamenFinal.xcdatamodeld in Sources */,
-				AAFC36A01D71260B003AAA5D /* ViewController.m in Sources */,
+				AAFC36A01D71260B003AAA5D /* Start.m in Sources */,
+				AAFC36BA1D712785003AAA5D /* ProductView.m in Sources */,
+				AAFC36BD1D712796003AAA5D /* BuyView.m in Sources */,
+				AAFC36B71D712767003AAA5D /* TemperatureView.m in Sources */,
 				AAFC369D1D71260B003AAA5D /* AppDelegate.m in Sources */,
 				AAFC369A1D71260B003AAA5D /* main.m in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BuyView.h
 //  ExamenFinal
 //
 //  Created by Christian Barragan on 26/08/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BuyView : UIViewController
 
 @end
-
