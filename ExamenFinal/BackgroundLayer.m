@@ -10,8 +10,7 @@
 
 @implementation BackgroundLayer
 
-//Metallic grey gradient background
-
+/* Metallic grey gradient background */
 + (CAGradientLayer*) greyGradient {
     
     
@@ -36,8 +35,9 @@
     return headerLayer;
     
 }
+/* ------------------------------------------------------------------------------------------------------------------ */
 
-//Blue gradient background
+/* Blue gradient background */
 + (CAGradientLayer*) blueGradient {
     
     UIColor *colorOne = [UIColor colorWithRed:(81/255.0)  green:(187/255.0)  blue:(219/255.0)  alpha:1.0];
@@ -56,8 +56,9 @@
     return headerLayer;
     
 }
+/* ------------------------------------------------------------------------------------------------------------------ */
 
-//Light Blue gradient background
+/* Light Blue gradient background */
 + (CAGradientLayer*) lightBlueGradient {
     
     UIColor *colorOne = [UIColor colorWithRed:(179/255.0)  green:(229/255.0)  blue:(252/255.0)  alpha:1.0];
@@ -76,5 +77,6 @@
     return headerLayer;
     
 }
+/* ------------------------------------------------------------------------------------------------------------------ */
 
 @end

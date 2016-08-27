@@ -9,6 +9,10 @@
 #import "TemperatureView.h"
 #import "BackgroundLayer.h"
 
+#define nLat @"20.609835"
+#define nLon @"-103.448989"
+#define KELVIN_CONV 273.75
+
 @interface TemperatureView ()
 
 @end
@@ -28,8 +32,8 @@
     /* Change the background. */
     [self setBackground];
     
+    /* Configure a NavigationBar to have a "Back" button. */
     UINavigationBar *navbar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 320, 60)];
-    //do something like background color, title, etc you self
     [self.view addSubview:navbar];
     
     UINavigationItem *item = [[UINavigationItem alloc]
@@ -41,7 +45,26 @@
                                    target:self
                                    action:@selector(doneButtonPressed:)];
     item.leftBarButtonItem = backButton;
-
+    
+    /* Call the Web Service */
+    mjsonWeather = [WebServices getWeatherWithLatitude:nLat AndLongitude:nLon];
+    print(NSLog(@"json = %@",mjsonWeather));
+    
+    ObjectResponse *objectResponse = [Parser parseWeatherObject];
+    
+    NSString *stName = objectResponse.name;
+    self.lblName.text = stName;
+    
+    Json_main *main = objectResponse.main;
+    
+    float temp_max = main.temp_max - KELVIN_CONV;
+    float temp_min = main.temp_min - KELVIN_CONV;
+    int humidity = main.humidity;
+    
+    self.lblMaxTempVal.text = [NSString stringWithFormat:@"%.1fºC", temp_max];
+    self.lblMinTempVal.text = [NSString stringWithFormat:@"%.1fºC", temp_min];
+    self.lblHumidityVal.text = [NSString stringWithFormat:@"%d%%", humidity];
+    
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 

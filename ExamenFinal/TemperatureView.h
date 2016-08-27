@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WebServices.h"
+#import "Declarations.h"
 
 @interface TemperatureView : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
+@property (weak, nonatomic) IBOutlet UILabel *lblMaxTempVal;
+@property (weak, nonatomic) IBOutlet UILabel *lblMinTempVal;
+@property (weak, nonatomic) IBOutlet UILabel *lblHumidityVal;
 
 @end
