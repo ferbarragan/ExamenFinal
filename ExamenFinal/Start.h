@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  Start.h
 //  ExamenFinal
 //
 //  Created by Christian Barragan on 26/08/16.
@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@import GoogleMaps;
 
-@interface Start : UIViewController
+@interface Start : UIViewController <GMSMapViewDelegate>
+
 
 
 @end

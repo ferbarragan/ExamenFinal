@@ -7,6 +7,7 @@
 //
 
 #import "TemperatureView.h"
+#import "BackgroundLayer.h"
 
 @interface TemperatureView ()
 
@@ -14,24 +15,57 @@
 
 @implementation TemperatureView
 
+#pragma - mark ViewController Methods
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* - ViewController Methods ----------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/*! \brief This settles a backgound layer with a gradient color.
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+    
+    /* Change the background. */
+    [self setBackground];
+    
+    UINavigationBar *navbar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 320, 60)];
+    //do something like background color, title, etc you self
+    [self.view addSubview:navbar];
+    
+    UINavigationItem *item = [[UINavigationItem alloc]
+                              init];
+    navbar.items= @[item];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Back"
+                                   style:UIBarButtonItemStylePlain
+                                   target:self
+                                   action:@selector(doneButtonPressed:)];
+    item.leftBarButtonItem = backButton;
 
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/*! \brief This settles a backgound layer with a gradient color.
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+/* ------------------------------------------------------------------------------------------------------------------ */
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+/*! \brief This settles a backgound layer with a gradient color.
+ */
+- (void)setBackground {
+    CAGradientLayer *bgLayer = [BackgroundLayer lightBlueGradient];
+    bgLayer.frame = self.view.bounds;
+    [self.view.layer insertSublayer:bgLayer atIndex:0];
 }
-*/
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+
+- (IBAction)doneButtonPressed:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
