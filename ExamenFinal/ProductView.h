@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Declarations.h"
+#import "Cell.h"
 
-@interface ProductView : UIViewController
+@interface ProductView : UIViewController <UITableViewDelegate, UITableViewDataSource, CellDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tblProducts;
 
 @end

@@ -7,31 +7,109 @@
 //
 
 #import "ProductView.h"
+#import "BuyView.h"
 
 @interface ProductView ()
+
+@property (nonatomic) int lastRowSel;
 
 @end
 
 @implementation ProductView
 
+#pragma - mark ViewController Methods
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* - ViewController Methods ----------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/*! \brief iOS Specific Function:
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    /* Set TableView delegates. */
+    [self tableViewSetDelegates];
 }
+/* ------------------------------------------------------------------------------------------------------------------ */
 
+/*! \brief iOS Specific Function:
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+/* ------------------------------------------------------------------------------------------------------------------ */
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+/*! \brief iOS Specific Function:
+ */
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    BuyView * buyView = [segue destinationViewController];
+    buyView.row = self.lastRowSel;
 }
-*/
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+#pragma mark - TableView Methods.
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* - TableView Methods ---------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/*! \brief Make self the delegate of the textfields.
+ */
+- (void)tableViewSetDelegates {
+    self.tblProducts.delegate = self;
+    self.tblProducts.dataSource = self;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/*! \brief iOS Specific Function:
+ */
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/*! \brief iOS Specific Function:
+ */
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return MAX_PRODUCTS;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/*! \brief iOS Specific Function:
+ */
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 190;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/*! \brief iOS Specific Function:
+ */
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    Cell *cell = (Cell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    if (cell == nil) {
+        [tableView registerNib:[UINib nibWithNibName:@"Cell" bundle:nil] forCellReuseIdentifier:@"Cell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    }
+    
+    cell.delegate = self;
+    cell.lblProdName.text = [NSString stringWithUTF8String:stProducts[indexPath.row].prodName];
+    cell.lblProdPrice.text = [NSString stringWithUTF8String:stProducts[indexPath.row].prodPrice];
+    cell.imgProd.image = [UIImage imageNamed:[NSString stringWithUTF8String:stProducts[indexPath.row].image]];
+    cell.row = indexPath.row;
+    return cell;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/*! \brief Custom Cell delegate method.
+ */
+-(void)whenBuyButtonPressed:(Cell *)cell {
+    self.lastRowSel = cell.row;
+    /* Trigger the segue. */
+    [self performSegueWithIdentifier:@"idSegueBuyView" sender:self];
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
 
 @end

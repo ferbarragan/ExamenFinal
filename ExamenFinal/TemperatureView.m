@@ -41,7 +41,7 @@
                               init];
     navbar.items= @[item];
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Back"
+                                   initWithTitle:@"Atrás"
                                    style:UIBarButtonItemStylePlain
                                    target:self
                                    action:@selector(doneButtonPressed:)];
@@ -98,10 +98,17 @@
 }
 /* ------------------------------------------------------------------------------------------------------------------ */
 
+#pragma mark - Action Methods.
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* - Action Methods ------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
 
+/*! \brief Action when the button backButton is pressed. This will return to the last view controller.
+ */
 - (IBAction)doneButtonPressed:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+/* ------------------------------------------------------------------------------------------------------------------ */
 
 @end

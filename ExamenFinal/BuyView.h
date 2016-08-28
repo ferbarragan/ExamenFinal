@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Declarations.h"
 
 @interface BuyView : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *imgPay;
+@property (weak, nonatomic) IBOutlet UIButton *btnPay;
 
+@property (nonatomic) int row;
+
+- (IBAction)btnPayPressed:(id)sender;
 @end

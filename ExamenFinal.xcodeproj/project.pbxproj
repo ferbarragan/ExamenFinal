@@ -47,6 +47,16 @@
 		AAFF65D61D7206EC00CE1F38 /* Json_weather.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFF65D51D7206EC00CE1F38 /* Json_weather.m */; };
 		AAFF65DD1D724D4E00CE1F38 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFF65DB1D724D4E00CE1F38 /* Cell.m */; };
 		AAFF65DE1D724D4E00CE1F38 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAFF65DC1D724D4E00CE1F38 /* Cell.xib */; };
+		AAFF65EA1D72590500CE1F38 /* cablelight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFF65E01D72590500CE1F38 /* cablelight.jpg */; };
+		AAFF65EB1D72590500CE1F38 /* cargador.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFF65E11D72590500CE1F38 /* cargador.jpg */; };
+		AAFF65EC1D72590500CE1F38 /* impresora.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFF65E21D72590500CE1F38 /* impresora.jpg */; };
+		AAFF65ED1D72590500CE1F38 /* kindle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFF65E31D72590500CE1F38 /* kindle.jpg */; };
+		AAFF65EE1D72590500CE1F38 /* motog4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFF65E41D72590500CE1F38 /* motog4.jpg */; };
+		AAFF65EF1D72590500CE1F38 /* mouse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFF65E51D72590500CE1F38 /* mouse.jpg */; };
+		AAFF65F01D72590500CE1F38 /* smarttv.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFF65E61D72590500CE1F38 /* smarttv.jpg */; };
+		AAFF65F11D72590500CE1F38 /* smartw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFF65E71D72590500CE1F38 /* smartw.jpg */; };
+		AAFF65F21D72590500CE1F38 /* tripie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFF65E81D72590500CE1F38 /* tripie.jpg */; };
+		AAFF65F31D72590500CE1F38 /* vtindew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFF65E91D72590500CE1F38 /* vtindew.jpg */; };
 		E68FBB6B91F113922337FE8A /* Pods_ExamenFinal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D47335D0DB5ECB9C255344 /* Pods_ExamenFinal.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +144,16 @@
 		AAFF65DA1D724D4E00CE1F38 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		AAFF65DB1D724D4E00CE1F38 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 		AAFF65DC1D724D4E00CE1F38 /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		AAFF65E01D72590500CE1F38 /* cablelight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cablelight.jpg; sourceTree = "<group>"; };
+		AAFF65E11D72590500CE1F38 /* cargador.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cargador.jpg; sourceTree = "<group>"; };
+		AAFF65E21D72590500CE1F38 /* impresora.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = impresora.jpg; sourceTree = "<group>"; };
+		AAFF65E31D72590500CE1F38 /* kindle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kindle.jpg; sourceTree = "<group>"; };
+		AAFF65E41D72590500CE1F38 /* motog4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = motog4.jpg; sourceTree = "<group>"; };
+		AAFF65E51D72590500CE1F38 /* mouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mouse.jpg; sourceTree = "<group>"; };
+		AAFF65E61D72590500CE1F38 /* smarttv.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smarttv.jpg; sourceTree = "<group>"; };
+		AAFF65E71D72590500CE1F38 /* smartw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smartw.jpg; sourceTree = "<group>"; };
+		AAFF65E81D72590500CE1F38 /* tripie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tripie.jpg; sourceTree = "<group>"; };
+		AAFF65E91D72590500CE1F38 /* vtindew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vtindew.jpg; sourceTree = "<group>"; };
 		F9411CF00E523EC23070655A /* Pods-ExamenFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamenFinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExamenFinal/Pods-ExamenFinal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +207,7 @@
 		AAFC36971D71260B003AAA5D /* ExamenFinal */ = {
 			isa = PBXGroup;
 			children = (
+				AAFF65DF1D72590500CE1F38 /* img */,
 				AAFF65CC1D71F48D00CE1F38 /* Models */,
 				AAFF65771D71E34300CE1F38 /* Classes */,
 				AAFF65731D71456600CE1F38 /* Utils */,
@@ -383,6 +404,23 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		AAFF65DF1D72590500CE1F38 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				AAFF65E01D72590500CE1F38 /* cablelight.jpg */,
+				AAFF65E11D72590500CE1F38 /* cargador.jpg */,
+				AAFF65E21D72590500CE1F38 /* impresora.jpg */,
+				AAFF65E31D72590500CE1F38 /* kindle.jpg */,
+				AAFF65E41D72590500CE1F38 /* motog4.jpg */,
+				AAFF65E51D72590500CE1F38 /* mouse.jpg */,
+				AAFF65E61D72590500CE1F38 /* smarttv.jpg */,
+				AAFF65E71D72590500CE1F38 /* smartw.jpg */,
+				AAFF65E81D72590500CE1F38 /* tripie.jpg */,
+				AAFF65E91D72590500CE1F38 /* vtindew.jpg */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -443,9 +481,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAFF65F31D72590500CE1F38 /* vtindew.jpg in Resources */,
+				AAFF65ED1D72590500CE1F38 /* kindle.jpg in Resources */,
+				AAFF65EF1D72590500CE1F38 /* mouse.jpg in Resources */,
+				AAFF65EC1D72590500CE1F38 /* impresora.jpg in Resources */,
+				AAFF65F11D72590500CE1F38 /* smartw.jpg in Resources */,
+				AAFF65F01D72590500CE1F38 /* smarttv.jpg in Resources */,
 				AAFC36AB1D71260B003AAA5D /* LaunchScreen.storyboard in Resources */,
+				AAFF65F21D72590500CE1F38 /* tripie.jpg in Resources */,
 				AAFF65DE1D724D4E00CE1F38 /* Cell.xib in Resources */,
 				AAFC36A81D71260B003AAA5D /* Assets.xcassets in Resources */,
+				AAFF65EA1D72590500CE1F38 /* cablelight.jpg in Resources */,
+				AAFF65EE1D72590500CE1F38 /* motog4.jpg in Resources */,
+				AAFF65EB1D72590500CE1F38 /* cargador.jpg in Resources */,
 				AAFC36A31D71260B003AAA5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

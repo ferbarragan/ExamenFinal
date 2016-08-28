@@ -14,24 +14,59 @@
 
 @implementation BuyView
 
+#pragma - mark ViewController Methods
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* - ViewController Methods ----------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/*! \brief This settles a backgound layer with a gradient color.
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    /* Configure a NavigationBar to have a "Back" button. */
+    UINavigationBar *navbar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 320, 60)];
+    [self.view addSubview:navbar];
+    
+    UINavigationItem *item = [[UINavigationItem alloc]
+                              init];
+    navbar.items= @[item];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Atrás"
+                                   style:UIBarButtonItemStylePlain
+                                   target:self
+                                   action:@selector(doneButtonPressed:)];
+    item.leftBarButtonItem = backButton;
+    
+    /* Configure the UI elements. */
+    self.imgPay.image = [UIImage imageNamed:[NSString stringWithUTF8String:stProducts[self.row].image]];
+    [self.btnPay setTitle:[NSString stringWithFormat:@"$%s", stProducts[self.row].prodPrice] forState:UIControlStateNormal];
+    
 }
+/* ------------------------------------------------------------------------------------------------------------------ */
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+/* ------------------------------------------------------------------------------------------------------------------ */
 
-/*
-#pragma mark - Navigation
+#pragma mark - Action Methods.
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* - Action Methods ------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+/*! \brief Action when the button backButton is pressed. This will return to the last view controller.
+ */
+- (IBAction)doneButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-*/
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/*! \brief Action when the button btnPay is pressed.
+ */
+- (IBAction)btnPayPressed:(id)sender {
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
 
 @end

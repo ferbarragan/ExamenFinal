@@ -18,7 +18,16 @@
 #define nDebugEnable    0
 #define print(x)        if(nDebugEnable){(x);}
 
+typedef struct {
+    char *prodName;
+    char *prodPrice;
+    char *image;
+} tst_Products;
+
+#define MAX_PRODUCTS (10)
+
 extern NSDictionary *mjsonWeather;
+extern tst_Products stProducts[MAX_PRODUCTS];
 
 @interface Declarations : NSObject
 
