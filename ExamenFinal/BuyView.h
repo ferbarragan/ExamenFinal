@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Declarations.h"
+#import "PayPalMobile.h"
 
-@interface BuyView : UIViewController
+@interface BuyView : UIViewController<PayPalPaymentDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imgPay;
 @property (weak, nonatomic) IBOutlet UIButton *btnPay;
 

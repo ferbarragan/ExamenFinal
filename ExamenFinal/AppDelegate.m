@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "OCMapperConfig.h"
+#import "PayPalMobile.h"
 
 @import GoogleMaps;
 
@@ -30,6 +31,11 @@
     /* OC Mapper integration ********************************************************************************/
     /********************************************************************************************************/
     [OCMapperConfig configure];
+    
+    /********************************************************************************************************/
+    /* PayPal integration ***********************************************************************************/
+    /********************************************************************************************************/
+    [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentSandbox : @"YOUR_CLIENT_ID_FOR_SANDBOX"}];
     
     return YES;
 }
