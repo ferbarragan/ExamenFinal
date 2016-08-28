@@ -55,15 +55,18 @@
     NSString *stName = objectResponse.name; /* Store the parsed name. */
     
     Json_main *main = objectResponse.main;
-    //Json_weather *weather = objectResponse.weather[0];
+    Json_weather *weather = objectResponse.weather[0];
+    //NSMutableArray *weather = [[NSMutableArray alloc] initWithObjects:objectResponse.weather, nil];
+    
+    
     /* Get the temperatures */
     float temp_max = main.temp_max - KELVIN_CONV;
     float temp_min = main.temp_min - KELVIN_CONV;
     /* Get the humidity */
     int humidity = main.humidity;
     /* Get the weather icon */
-    //NSString *icon = [[NSString alloc] initWithString:weather.icon];
-    NSString *icon = @"04d";
+    NSString *icon = [[NSString alloc] initWithString:weather.icon];
+    //NSString *icon = @"04d";
     NSString *iconURL = [[NSString alloc] initWithFormat:@"%@%@.png",nURLMain,icon];
     NSURL *url = [NSURL URLWithString:iconURL];
     NSData *data = [NSData dataWithContentsOfURL:url];

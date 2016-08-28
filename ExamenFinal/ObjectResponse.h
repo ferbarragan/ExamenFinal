@@ -13,9 +13,10 @@
 @interface ObjectResponse : NSObject
 
 /*  */
-@property (nonatomic, strong) NSMutableArray *weather;
-//@property (nonatomic, strong) Json_weather * weather;
-@property (nonatomic, strong) Json_main *main;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) Json_main *main;
+@property (nonatomic, strong) NSArray *weather;
+
+
 
 @end

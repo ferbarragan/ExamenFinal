@@ -20,6 +20,10 @@
     [[ObjectMapper sharedInstance] setLoggingProvider:commonLoggingProvider];
     
     /******************* Customized objects **********************/
+    [inCodeMappingProvider mapFromDictionaryKey:@"weather"
+                                  toPropertyKey:@"weather"
+                                 withObjectType:[Json_weather class]
+                                       forClass:[ObjectResponse class]];
 }
 
 @end

@@ -11,8 +11,8 @@
 @interface Json_weather : NSObject
 
 @property (nonatomic) int id;
-@property (nonatomic) NSString * main;
-@property (nonatomic) NSString * description;
-@property (nonatomic) NSString * icon;
+@property (nonatomic, strong) NSString * main;
+@property (nonatomic, strong) NSString * des;
+@property (nonatomic, strong) NSString * icon;
 
 @end
